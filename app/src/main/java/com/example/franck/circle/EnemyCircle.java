@@ -23,7 +23,10 @@ public class EnemyCircle extends SimpleCircle {
         this.dx = dx;
         this.dy = dy;
     }
-
+    public void moveOneStep() {
+        x += dx;
+        y += dy;
+    }
     public void setEnemyOrFoodColorDependsOn(MainCircle mainCircle) {
         if (isSmallerThan(mainCircle)) {
             setColor(FOOD_COLOR);
