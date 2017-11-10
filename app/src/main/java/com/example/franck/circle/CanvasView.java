@@ -56,7 +56,7 @@ public class CanvasView extends View implements ICanvasView{
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-        int x = (int) event.getX();
+        int x = (int) event.getX();//координаты касания экрана
         int y = (int) event.getY();
         if (event.getAction() == MotionEvent.ACTION_MOVE) {
             gameManager.onTouchEvent(x, y);
