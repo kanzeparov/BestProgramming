@@ -15,7 +15,9 @@ public class MainCircle extends SimpleCircle{
         super(x, y, INIT_RADIUS);
         setColor(OUR_COLOR);
     }
-
+    public void initRadius() {
+        radius = INIT_RADIUS;
+    }
 
     public void moveMainCircleWhenTouchAt(int x1, int y1) {
         int dx = (x1 - x) * MAIN_SPEED / GameManager.getWidth();
