@@ -52,8 +52,22 @@ public class GameManager {
         SimpleCircle circleForDel = null;
         for (EnemyCircle circle : circles) {
             if (mainCircle.isIntersect(circle)) {
-                gameEnd("YOU LOSE!");
+                if (circle.isSmallerThan(mainCircle)) {
+                    mainCircle.growRadius(circle);
+                    circleForDel = circle;
+                    calculateAndSetCirclesColor();
+                    break;
+                } else {
+                    gameEnd("YOU LOSE!");
+                    return;
+                }
             }
+        }
+        if (circleForDel != null) {
+            circles.remove(circleForDel);
+        }
+        if (circles.isEmpty()) {
+            gameEnd("YOU WIN!");
         }
     }
 

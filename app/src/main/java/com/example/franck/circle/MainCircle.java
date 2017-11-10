@@ -26,5 +26,9 @@ public class MainCircle extends SimpleCircle{
         y += dy;
     }
 
+    public void growRadius(SimpleCircle circle) {
+        radius = (int) Math.sqrt(Math.pow(radius, 2) + Math.pow(circle.radius, 2));
+    }
+
 }
 
