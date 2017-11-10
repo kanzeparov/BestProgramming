@@ -15,7 +15,7 @@ import android.view.WindowManager;
  * Created by Franck on 11.11.2017.
  */
 
-public class CanvasView extends View {
+public class CanvasView extends View implements ICanvasView{
     private Paint paint; //кисточка
     public static int width;
     public static int height;
