@@ -3,7 +3,7 @@ package com.example.franck.circle;
 /**
  * Created by Franck on 11.11.2017.
  */
-
+//Игровой аспект игры
 public class GameManager {
     private MainCircle mainCircle;
     private CanvasView canvasView;
@@ -17,6 +17,17 @@ public class GameManager {
         initMainCircle();
     }
 
+    public void onTouchEvent(int x, int y) {
+        mainCircle.moveMainCircleWhenTouchAt(x, y);
+    }
+
+
+    public static int getWidth() {
+        return width;
+    }
+    public static int getHeight() {
+        return height;
+    }
     private void initMainCircle() {
         mainCircle = new MainCircle(width / 2, height / 2);
     }
